@@ -1,0 +1,32 @@
+
+
+@media screen and (max-width:700px) {
+	#headcontdata{display:none;}
+	#headerlinks{display:none;}
+	header img{margin:10px auto; display:block;}
+	nav a{font-size:16px; height:40px; padding:15px 6px;}
+	aside{float:none; width:100%; margin-left:0px;}
+	.add1img{width:140px; height:140px; border-radius:70px;}
+	#add1img1{background-size:140px 140px;}
+	#add1img2{background-size:140px 140px;}
+	#add1img3{background-size:140px 140px;}
+	.topdecor{border-left:500px solid #348cc4;}
+	.botdecor{border-right:500px solid #348cc4;}
+	footer{height:240px;}
+	#footleft{float:none; margin-left:0px; margin-top:0px;}
+	#footright{float:none; margin-right:0px;}
+	#maincont{text-align:center;}
+}
+
+@media screen and (max-width:540px) {
+	.add1col{float:none; width:100%; margin:20px 0px; padding:0px 20px;}
+	.addsimgs{width:300px; height:300px; float:none; margin:20px;}
+	.adds{text-align:center;}
+	.adds p{padding:0px 20px; display:inline-block;}
+	.topdecor{border-left:300px solid #348cc4;}
+	.botdecor{border-right:300px solid #348cc4;}
+}
+
+@media screen and (max-width:320px) {
+	
+}

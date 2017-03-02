@@ -1,0 +1,181 @@
+body{margin:0px auto;}
+*{box-sizing:border-box;}
+#wrapper{max-width:960px; min-width:320px; margin:0px auto;}
+p{	font-family:Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	line-height:18px;
+	letter-spacing:1px;}
+h1{	font-family:Tahoma, Geneva, sans-serif;
+	font-size:34px;
+	font-weight:bold;
+	line-height:30px;}
+h2{	font-family:Tahoma, Geneva, sans-serif;
+	font-size:28px;
+	font-weight:bold;
+	line-height:24px;}
+h3{	font-family:Tahoma, Geneva, sans-serif;
+	font-size:22\2px;
+	font-weight:bold;
+	line-height:18px;
+	letter-spacing:1px;}
+h4{	font-family:Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	line-height:18px;
+	letter-spacing:1px;}
+
+/*Header*/
+header img{
+	height:100px;
+	margin:10px;}
+#headerlinks{
+	width:170px;
+	height:120px;
+	float:right;
+	padding:10px;}
+.headerlinks{
+	height:40px;
+	width:40px;
+	margin:5px;
+	background-size:100% 100%;
+	transition:all 0.6s ease-out;
+	float:left;}
+.headerlinks:hover{background-color:#81c7f4; cursor:pointer;}
+#headfb{background-image:url('../Images/header/fbblack.png');}
+#headtw{background-image:url('../Images/header/twitterblack.png');}
+#headph{background-image:url('../Images/header/phoneblack.png');}
+#headyt{background-image:url('../Images/header/youtubeblack.png');}
+#headgg{background-image:url('../Images/header/googleblack.png');}
+#headma{background-image:url('../Images/header/mapsblack.png');}
+#headcontdata{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	text-align:right;
+	float:right;
+	margin-top:30px;
+	color:#348cc4;}
+
+/*Nav*/
+nav{
+	width:100%;
+	height:50px;
+	text-align:center;
+	margin-top: 20px;
+	background-color:#348cc4;
+	line-height:50px;}
+nav a{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	text-decoration:none;
+	height:40px;
+	padding:12px 30px;
+	transition:all 0.3s ease-out;}
+nav a:hover{background-color:white; color:#348cc4;}
+nav a:active{color:black;}
+.blhr{width:100%; height:4px; background-color:black;}
+
+/*Main*/
+main{width:100%; padding:20px;}
+#rotator{width:100%;}
+.rotator{width:100%; display:block;}
+.rotator:not(:nth-child(1)){display:none;}
+aside{
+	background-color:#348cc4;
+	float:right;
+	width:300px;
+	color:white;
+	padding:15px;
+	margin-left:20px;
+	margin-bottom:20px;
+	text-align:center;}
+#petemergency{
+	background-color:#ed3838;
+	width:calc(100% + 30px);
+	padding:1px 15px;
+	position:relative;
+	left:-15px;
+	margin-bottom:15px;}
+#first{width:150px;}
+#last{width:150px;}
+#email{width:190px;}
+.asidehr{
+	border:1px solid white;
+	width:90%;
+}
+
+/*Adds*/
+.adds{
+	width:100%;
+	background-color:#ebebeb;
+	margin-top:50px 0px;
+	clear:both;
+	display:inline-block;}
+.topdecor{
+	width:0;
+	height:0;
+	border-top:30px solid transparent;
+	border-left:600px solid #348cc4;
+	border-bottom:30px solid transparent;
+	position:relative;
+	top:-30px;}
+.botdecor{
+	width:0;
+	height:0;
+	border-top:30px solid transparent;
+	border-right:600px solid #348cc4;
+	border-bottom:30px solid transparent;
+	float:right;
+	position:relative;
+	top:-30px;}
+.add1col{
+	float:left;
+	width:calc(33.33333% - 40px);
+	text-align:center;
+	margin:0px 20px;}
+.add1img{
+	width:200px;
+	height:200px;
+	margin:0px auto;
+	text-align:center;
+	border-radius:100px;
+	border:2px solid black;}
+#add1img1{background-image:url("../Images/aside/vet1.jpg");}
+#add1img2{background-image:url("../Images/aside/vet2.jpg");}
+#add1img3{background-image:url("../Images/aside/vet3.jpg");}
+.addsimgs{
+	width:200px;
+	height:200px;
+	float:left;
+	margin:20px;
+	border:2px solid black;}
+.addsbuttons{
+	background-color:white;
+	height:30px;
+	width:150px;
+	line-height:30px;
+	display:inline-block;
+	text-align:center;
+	border:1px solid black;
+	margin-bottom:40px;}
+.addsbuttons:hover{cursor:pointer;}
+
+footer{
+	width:100%;
+	height:160px;
+	text-align:center;
+	margin-top:50px;
+	padding:10px;
+	clear:both;
+	display:block;
+	background-color:#348cc4;
+	color:white;}
+#footleft{float:left; margin-left:100px; margin-top:20px;}
+#footright{float:right; margin-right:100px;}
+footer a{text-decoration:none; color:white; transition:all 0.3s ease-out;}
+footer a:hover{color:black;}
+footer a:active{color:#ed3838;}
+
+/*Team*/
+.teamimgs{width:300px;}

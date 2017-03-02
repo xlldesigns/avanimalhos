@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Welcome</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1"/>
+	<meta name="author" content="Lucas Cleric">
+<script type="text/javascript">
+if(navigator.appName.indexOf("Internet Explorer")!=-1 || navigator.userAgent.match(/Trident.*rv[ :]*11\./))
+{window.location = "home.html";}
+</script>
+<style>
+#catspritecontainer{
+	position:fixed;
+	left:-418px;
+	top:calc(50% - 200px);
+	height:199px;
+	width:418px;
+	transition:left 3s linear;}
+.catwalk{
+	width:418px;
+	height:199px;
+	display:none;
+	animation:catwalk 1s steps(12) infinite;}
+#catwalklr{background:url('Images/index/catwalklr.png');}
+#catwalkrl{background:url('Images/index/catwalkrl.png');}
+@keyframes catwalk{from{background-position: 0px 2388px}
+	to{background-position: 0px 0px}}
+	
+.catrun{
+	width:402px;
+	height:199px;
+	display:none;
+	animation:catrun 0.4s steps(13) infinite;}
+#catrunlr{background:url('Images/index/catrunlr.png');}
+#catrunrl{background:url('Images/index/catrunrl.png');}
+@keyframes catrun{from{background-position: 0px 2587px}
+	to{background-position: 0px 0px}}
+
+.cpl{
+	width:30px;
+	height:30px;
+	transform:rotate(90deg);
+	position:fixed;
+	top:50%;
+	display:none;}
+.cpr{
+	width:30px;
+	height:30px;
+	transform:rotate(90deg);
+	position:fixed;
+	top:58%;
+	display:none;}
+#cp1{left:0%;}
+#cp2{left:5%;}
+#cp3{left:10%;}
+#cp4{left:15%;}
+#cp5{left:20%;}
+#cp6{left:25%;}
+#cp7{left:30%;}
+#cp8{left:35%;}
+#cp9{left:40%;}
+#cp10{left:45%;}
+
+#enter{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-style:italic;
+	text-decoration:underline;
+	font-size:40px;
+	position:fixed;
+	top:50%;
+	margin:0px;
+	color:black;
+	transition:all 0.7s ease-out;
+	display:none;
+	left:50%;}
+#enter:hover{
+	color:#348cc4;
+	font-size:50px;}
+</style>
+
+</head>
+
+<body>
+
+<audio id="meow" onload="playmeow();">
+	<source src="Images/index/meow.mp3" type="audio/mpeg"/>
+</audio>
+
+<div id="catspritecontainer">
+	<div class="catwalk" id="catwalklr"></div>
+	<div class="catwalk" id="catwalkrl"></div>
+	<div class="catrun" id="catrunlr"></div>
+	<div class="catrun" id="catrunrl"></div>
+</div>
+
+<img class="cpl" id="cp1" src="Images/index/catpawl.gif"/>
+<img class="cpr" id="cp2" src="Images/index/catpawr.gif"/>
+<img class="cpl" id="cp3" src="Images/index/catpawl.gif"/>
+<img class="cpr" id="cp4" src="Images/index/catpawr.gif"/>
+<img class="cpl" id="cp5" src="Images/index/catpawl.gif"/>
+<img class="cpr" id="cp6" src="Images/index/catpawr.gif"/>
+<img class="cpl" id="cp7" src="Images/index/catpawl.gif"/>
+<img class="cpr" id="cp8" src="Images/index/catpawr.gif"/>
+<img class="cpl" id="cp9" src="Images/index/catpawl.gif"/>
+<img class="cpr" id="cp10" src="Images/index/catpawr.gif"/>
+
+<a id="enter" href="home.html">Enter&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+
+<script>
+var csc = document.getElementById('catspritecontainer');
+var catwalklr = document.getElementById('catwalklr');
+var catwalkrl = document.getElementById('catwalkrl');
+var catrunlr = document.getElementById('catrunlr');
+var catrunrl = document.getElementById('catrunrl');
+
+var counter = 0;
+
+catsprite();
+
+function catsprite(){
+	if(counter == 0){
+		function run1(){
+			csc.style.transition="all 3s linear";
+			csc.style.left=window.innerWidth + "px";
+			catrunrl.style.display="none";
+			catwalklr.style.display="block";
+			counter++;
+		}setTimeout(run1, 1000);
+	}else if (counter == 1){
+		function run2(){
+			csc.style.left="-418px";
+			catwalklr.style.display="none";
+			catwalkrl.style.display="block";
+			counter++;
+		}setTimeout(run2, 500);
+	}else if (counter == 2){
+		csc.style.transition="all 1s linear";
+		function run3(){
+			csc.style.left=window.innerWidth + "px";
+			catwalkrl.style.display="none";
+			catrunlr.style.display="block";
+			counter++;
+		}setTimeout(run3, 1000);
+	}else if (counter == 3){
+		function run4(){
+			csc.style.transition="all 3s linear";
+			csc.style.left="-418px";
+			catrunlr.style.display="none";
+			catwalkrl.style.display="block";
+			counter++;
+		}setTimeout(run4, 1000);
+	}else if (counter == 4){
+		csc.style.transition="all 1s linear";
+		function run5(){
+			csc.style.left=window.innerWidth + "px";
+			catwalkrl.style.display="none";
+			catrunlr.style.display="block";
+			counter++;
+		}setTimeout(run5, 3000);
+	}else{
+		function run6(){
+			csc.style.left="-418px";
+			catrunlr.style.display="none";
+			catrunrl.style.display="block";
+			counter = 0;
+		}setTimeout(run6, 300);
+	}
+}setInterval(catsprite, 4000);
+
+function catpaws(){
+var i = document.getElementsByTagName('img');
+
+for(var x = 0; x < i.length; x++){
+	setTimeout(function(x){
+		i[x].style.display="block";
+	}, x * 500, x);
+}}setTimeout(catpaws, 12000);
+
+function enter(){
+var enter = document.getElementById('enter');
+	enter.style.display="block";
+}setTimeout(enter, 17000);
+
+var audio = document.getElementById('meow');
+	audio.play();
+
+function playmeow(){
+var audio = document.getElementById('meow');
+	audio.play();
+}setInterval(playmeow, 8000);
+</script>
+</body>
+</html>
